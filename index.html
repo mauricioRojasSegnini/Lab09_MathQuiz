@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Test</title>
+    <link rel="stylesheet" href="/Styles/styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Quiz de matemáticas</h1>
+      <h3>Pon aprueba tus conociemientos</h3>
+    </div>
+    <div class="mathQuiz">
+      Ingrese la cantidad de preguntas:
+      <input
+        type="number"
+        id="totalQuestions"
+        name="fname"
+        value=""
+        onchange="limiter(this);"
+        autocomplete="off"
+        placeholder="5-20"
+      />
+      <button onclick="getQuestion()">Generar quiz</button>
+      <br />
+      <br />
+      <div class="test"></div>
+      <div class="options">
+        <button onclick="showResults()">Revisar mis respuestas</button>
+        <button onclick="score()">Ver las respuestas</button>
+      </div>
+      <img class="gif" src="/Img/math-gif.gif" alt="" />
+    </div>
+  </body>
+
+  <script src="/Scripts/mathTest.js"></script>
+</html>

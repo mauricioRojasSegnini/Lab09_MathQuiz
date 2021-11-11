@@ -1,0 +1,56 @@
+.header {
+  padding: 1%;
+  text-align: center;
+  background: rgb(244 67 54);
+  color: white;
+  font-size: 20px;
+}
+#body {
+  background-color: gainsboro;
+}
+.gif {
+  margin-top: 10%;
+}
+
+.mathQuiz {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  color: #333;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.list::marker {
+  list-style: none;
+  counter-reset: li;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: list-item;
+  color: lightsalmon;
+}
+.problem {
+  color: black;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.enum {
+  list-style: none;
+  counter-reset: li;
+}
+
+.enum li::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #cae3f1;
+  color: #305c76;
+  content: counter(li);
+  counter-increment: li;
+  font-size: 0.875em;
+  font-weight: 700;
+  margin-right: 1.5rem;
+}
