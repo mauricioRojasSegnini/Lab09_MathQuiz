@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+ <body style="padding-top:0px">
+     <div class="container-lg">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Math Test</title>
+            <link rel="stylesheet" href="/Styles/styles.css" />
+        </head>
+        <div class="header">
+            <h1>Quiz de matemáticas</h1>
+            <h3>Pon aprueba tus conociemientos</h3>
+        </div>
+        
+
+        <div class="mathQuiz">
+            <div class="card-header">
+                <h3>
+                    Ingrese la cantidad de preguntas:
+                </h3>
+                <div class="input-group mb-3 justify-content-center d-flex">
+                    <input type="number" id="totalQuestions" name="fname" value="" onchange="limiter(this);" autocomplete="off" placeholder="5-20" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" onclick="getQuestion()">Generar</button>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <div class="card-body d-flex w-100 justify-content-center d-flex">
+                        <div class="test" style=""></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Suma
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>La adición o suma es la operación matemática de composición que consiste</strong>  en combinar o añadir dos números o más para obtener una cantidad final o total. La suma también ilustra el proceso de juntar dos colecciones de objetos con el fin de obtener una sola colección. Por otro lado, la acción repetitiva de sumar uno, es la forma más básica de contar.
+
+                                    En términos más formales, la suma es una operación aritmética definida sobre conjuntos de números (naturales, enteros, racionales, irracionales, reales y complejos), y también sobre estructuras asociadas a ellos, como espacios vectoriales con vectores cuyas componentes sean estos números o funciones que tengan su imagen en ellos. También se suman matrices.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    La resta
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>La resta o la sustracción es una operación aritmética que se representa con el signo (−);</strong>  representa la operación de eliminación de objetos de una colección. Por ejemplo, en la imagen de la derecha hay 5 − 2 manzanas; significando 5 manzanas con 2 quitadas, con lo cual hay un total de 3 manzanas. Por lo tanto, 5 − 2 = 3. Además de contar frutas, la sustracción también puede representar combinación de otras magnitudes físicas y abstractas usando diferentes tipos de objetos: números negativos, fracciones, números irracionales, vectores, decimales, funciones, matrices y más.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    La multiplicación
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>La multiplicación es una operación binaria que se establece en un conjunto numérico.</strong>​ En aritmética, es una de las cuatro operaciones elementales, junto con la suma, la resta y la división, y es la operación inversa de esta última. Esto significa que para toda multiplicación hay una división, por ejemplo «5 por 2 igual a 10» existe una división equivalente, en este caso: «10 dividido entre 2 igual a 5», o «10 dividido entre 5 igual a 2».
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="options">
+                <div class="d-grid gap-2  justify-content-center d-flex">
+                    <button type="button" class="btn btn-success btn-lg" onclick="showResults()">Revisar mis respuestas</button>
+                    <button type="button" class="btn btn-success btn-lg" onclick="score()">Ver las respuestas</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+    <script src="/Scripts/mathTest.js"></script>
+</html>

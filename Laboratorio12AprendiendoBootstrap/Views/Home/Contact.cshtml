@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Contactos";
+}
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/33782c52ea.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="~/Scripts/contactoStyle.css" />
+    </head>
+    <div class="card-header">
+        <h2>@ViewBag.Title</h2>
+        <h3>@ViewBag.Message</h3>
+    </div>
+
+    <div class="card-body">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Ver contactos
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Lista de contactos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h2>Mauricio Rojas Segnini</h2>
+                        <h5>Pueden contactarme en mis redes sociales y con gusto los atenderé</h5>
+                        <p>Facebook: Mauricio Rojas</p>
+                        <p>Insta: mauro_segnini17</p>
+                        <p>Correo: mauricio.rojassegnini@ucr.ac.cr.com</p>
+                        <p>Tel: 83536038</p>
+                        <div style="text-align:center">
+                            <a href="https://www.facebook.com/MauricioRojasSegnini"
+                                target="_blank">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                            <a href="https://www.instagram.com/mauro_segnini17/?hl=es"
+                                target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="mailto:mauricio.rojassegnini@ucr.ac.cr" target="_blank">
+                                <i class="far fa-envelope"></i>
+                            </a>
+                            <p class="inicio">
+                                <a href="/Home/index">Inicio </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+    
+        <address>
+            <strong>Support:</strong>   <a href="mailto:maurosegnini@hotmail.com">maurosegnini@hotmail.com</a><br />
+            <strong>Marketing:</strong> <a href="mailto:maurosegnini@ucr.ac.cr.com">maurosegnini@ucr.ac.cr.com</a>
+        </address>
+    </div>
+</html>
